@@ -1,0 +1,29 @@
+[project]
+name = "sentence-distance-checker"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Tadashi Takahashi", email = "ttakahashi@umn.co.jp" }
+]
+dependencies = [
+    "boto3>=1.35.34",
+    "requests>=2.32.3",
+    "scikit-learn>=1.5.2",
+    "numpy>=2.1.1",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sentence_distance_checker"]
